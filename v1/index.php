@@ -36,4 +36,7 @@
         </main>
     </div>
 </body>
+<footer>
+    Blog réalisé avec PHP, Javscript et HTML
+</footer>
 </html>
