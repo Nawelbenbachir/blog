@@ -9,7 +9,7 @@
 <body>
     <div id="page">
         <header>
-            <a id='titreBlog' href='index.php'> <h1> Mon blog </h1> </a>
+            <a id='titreBlog' href='index.php'> <h1> Mon blog - Articles </h1> </a>
             <p>Je vous souhaite la bienvenue sur ce modeste blog</p>
         </header>
         <main>
@@ -29,8 +29,9 @@
             <?php endforeach; ?>
         </main>
     </div>
+    <footer>
+        Blog réalisé avec PHP, Javscript et HTML
+    </footer>
 </body>
-<footer>
-    Blog réalisé avec PHP, Javscript et HTML
-</footer>
+
 </html>
