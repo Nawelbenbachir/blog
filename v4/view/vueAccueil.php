@@ -11,9 +11,8 @@
 <?php foreach($articles as $article):?>
         <article>
             <header>
-                <!-- ajout d'un lien vers chaque article quand on clique dessus, le lien contient en php l'ajout de l'id de l'article correspondant
-                 ajout en php de l'action défini dans le controleur pour qu'il puisse effectuer une action  -->
-                <a href="index.php?action=article&id=<?=$article['id']?>"><h1 class="titreArticle"> <?php echo $article['titre'];?> </h1></a>
+                <!-- ajout d'un lien vers chaque article quand on clique dessus, le lien contient en php l'ajout de l'id de l'article correspondant -->
+                <a href="article.php?id=<?=$article['id']?>"><h1 class="titreArticle"> <?php echo $article['titre'];?> </h1></a>
                 <!--?= equivalent à ?php echo= -->
                 <time><?= $article['date']; ?> </time>
             </header>
@@ -24,7 +23,7 @@
             <!-- Arret de la temporisation et récupération du tampon de sortie -->
             <?php $contenu=ob_get_clean(); ?>
             <!-- Inclusion du gabarit -->
-            <?php require "gabarit.php";  ?>
+            <?php require_once "gabarit.php";  ?>
    
 
     
