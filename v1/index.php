@@ -1,42 +1,8 @@
 <?php
-    // connexion à la bdd
-    $bdd=new PDO('mysql:host=localhost;dbname=blog;charset=utf8','root','');
-    //réxupération des articles
-    $articles= $bdd->query('SELECT * FROM articles ORDER BY date DESC');
-?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon blog</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="page">
-        <header>
-            <a id='titreBlog' href='index.php'> <h1> Mon blog </h1> </a>
-            <p>Je vous souhaite la bienvenue sur ce modeste blog</p>
-        </header>
-        <main>
-            <?php
-            
-                //var_dump($articles->fetchAll())
-                // :<? équivalent à <?php echo 
-                foreach($articles as $article):?>
-                <article>
-                    <header>
-                        <h1 class="titreArticle"> <?php echo $article['titre'];?> </h1>
-                        <!--?= equivalent à ?php echo= -->
-                        <time><?= $article['date']; ?> </time>
-                    </header>
-                    <p> <?= $article['contenu']; ?> </p>
-                </article>
-            <?php endforeach; ?>
-        </main>
-    </div>
-</body>
-<footer>
-    Blog réalisé avec PHP, Javscript et HTML
-</footer>
-</html>
+    //Inclusion du modèle
+    require_once 'modele.php';
+    //fonction qui retourne la liste d'article présents dans la base 
+    $artciles= getArticles();
+    //Inclusion de l'affichage
+    //require provoque une erreur fatale si le fichier n'est pas trouvé contrairement à include
+    require_once 'vueAccueil.php';
