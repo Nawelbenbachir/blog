@@ -1,0 +1,23 @@
+
+body{
+    color: #bfbfbf;
+    background: black;
+    font-family: 'Futura-Medium','Futura', 'Trebuchet MS', sans-serif;
+}
+
+#page{
+    background-color:#333333; 
+    margin: 0 auto;  /*centrage */
+    padding: 0;
+    width: 70%; /*provisoire*/
+
+}
+
+#titreBlog{
+    color: #bfbfbf;
+    text-decoration : none;
+}
+
+.titreArticle{
+    margin-bottom:0;
+}
